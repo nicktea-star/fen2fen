@@ -76,5 +76,10 @@ public class Fen2Fen {
 	b.put("h6","");
 	b.put("h7","");
 	b.put("h8","");
+	
 	}
 }
+
+
+	// For loop to iterate over the characters of the fen
+	for ()
