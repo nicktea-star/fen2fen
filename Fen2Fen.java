@@ -1,11 +1,10 @@
 	// For loop to iterate over the characters of the fen
-	for ()
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.Scanner;
 
 class iterate {
-	static void traverseFen() {
+	static void traverseFen(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			System.out.print("a");
 		}
