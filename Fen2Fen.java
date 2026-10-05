@@ -7,14 +7,12 @@ public class Fen2Fen {
 
 	public static void main(String[] args) {
 		// Get the fen from the user
-		Scanner fenReader = new Scanner(System.in);
+		Scanner Reader = new Scanner(System.in);
 		System.out.print("Please introduce the current state of your board in the FEN format: \n $ ");
-		String fen = fenReader.nextLine();
-
-		// Get the move from the user
-		Scanner moveReader = new Scanner(System.in);
 		System.out.print("Please introduce your move in the UCI format: \n $ ");
-		String move = moveReader.nextLine();
+		String fen = Reader.nextLine();
+		String move = Reader.nextLine();
+		Reader.close();
 
 		// Create an empty board
 		Dictionary<String, String> b = new Hashtable<>();
