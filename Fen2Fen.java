@@ -1,7 +1,7 @@
 // For loop to iterate over the characters of the fen
-import java.util.Dictionary;
 import java.util.Enumeration;
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Fen2Fen {
