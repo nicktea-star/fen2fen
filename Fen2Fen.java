@@ -1,8 +1,5 @@
 // For loop to iterate over the characters of the fen
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Fen2Fen {
 
@@ -16,7 +13,7 @@ public class Fen2Fen {
 		Reader.close();
 
 		// Create an empty board
-		Map<String, String> b = new HashMap<String, String>();
+		Map<String, String> b = new LinkedHashMap<>();
 		b.put("h8","");
 		b.put("h7","");
 		b.put("h6","");
@@ -82,12 +79,9 @@ public class Fen2Fen {
 		b.put("a2","");
 		b.put("a1","");
 
-		Enumeration keys = b.keys();
-		System.out.print(keys);
-
 		// Traverse the fen and put pieces on the board
 		for (int i = 0; i < fen.length(); i++) {
-			for (String i : b.keySet()) {
+			for (Map.Entry<String, String> entry : b.entrySet()) {
 				if (fen.charAt(i) == 'K') {
 					System.out.println("K");
 				} else if (fen.charAt(i) == 'Q') {
@@ -105,6 +99,3 @@ public class Fen2Fen {
 		}
 	}
 }
-
-
-		
