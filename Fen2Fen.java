@@ -83,15 +83,16 @@ public class Fen2Fen {
 
 		// Traverse the fen and put pieces on the board
 		for (int i = 0; i < fen.length(); i++) {
-			for (int j = 0; j < matrix.length; j++) {
-				if (matrix[j][1] == "") {
-					matrix[j][1] = String.valueOf(fen.charAt(i));
+			if (Character.isDigit(fen.charAt(i))) {
+				System.out.print("a");
+			}
+			else {
+				for (int j = 0; j < matrix.length; j++) {
+					if (matrix[j][1] == "") {
+						matrix[j][1] = String.valueOf(fen.charAt(i));
+					}
 				}
 			}
 		}
-	for (int j = 0; j < matrix.length; j++) {
-		System.out.println(matrix[j][1]);
-	}
-
 	}
 }
