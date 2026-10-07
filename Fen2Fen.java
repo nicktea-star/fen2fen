@@ -79,24 +79,24 @@ public class Fen2Fen {
 			{"a3",""},
 			{"a2",""},
 			{"a1",""}
-		}
+		};
 
 		// Traverse the fen and put pieces on the board
 		for (int i = 0; i < fen.length(); i++) {
-			for (Map.Entry<String, String> entry : b.entrySet()) {
-				if (entry.getValue()== "") {
+			for (int j = 0; i < matrix.length(); j++) {
+				if (j[1] == "") {
 					if (fen.charAt(i) == 'K') {
-						System.out.println("K");
+						j[1] = "K";
 					} else if (fen.charAt(i) == 'Q') {
-						System.out.println("Q");
+						j[1] = "Q";
 					} else if (fen.charAt(i) == 'B') {
-						System.out.println("B");
+						j[1] = "B";
 					} else if (fen.charAt(i) == 'N') {
-						System.out.println("N");
+						j[1] = "N";
 					} else if (fen.charAt(i) == 'R') {
-						System.out.println("R");
+						j[1] = "R";
 					} else if (fen.charAt(i) == 'P') {
-						System.out.println("P");
+						j[1] = "P";
 					}
 				}
 			}
