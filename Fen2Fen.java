@@ -83,23 +83,15 @@ public class Fen2Fen {
 
 		// Traverse the fen and put pieces on the board
 		for (int i = 0; i < fen.length(); i++) {
-			for (int j = 0; i < matrix.length(); j++) {
-				if (j[1] == "") {
-					if (fen.charAt(i) == 'K') {
-						j[1] = "K";
-					} else if (fen.charAt(i) == 'Q') {
-						j[1] = "Q";
-					} else if (fen.charAt(i) == 'B') {
-						j[1] = "B";
-					} else if (fen.charAt(i) == 'N') {
-						j[1] = "N";
-					} else if (fen.charAt(i) == 'R') {
-						j[1] = "R";
-					} else if (fen.charAt(i) == 'P') {
-						j[1] = "P";
-					}
+			for (int j = 0; j < matrix.length; j++) {
+				if (matrix[j][1] == "") {
+					matrix[j][1] = String.valueOf(fen.charAt(i));
 				}
 			}
 		}
+	for (int j = 0; j < matrix.length; j++) {
+		System.out.println(matrix[j][1]);
+	}
+
 	}
 }
