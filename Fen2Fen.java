@@ -85,6 +85,11 @@ public class Fen2Fen {
 		for (int i = 0; i < fen.length(); i++) {
 			for (int j = 0; j < matrix.length; j++) {
 				if (matrix[j][1] == "") {
+					if ( Character.isDigit(fen.charAt(i)) == true) {
+						for (int k = 0; k <= Character.getNumericValue(i); k++) {
+							matrix[k][1] = "O";
+						}
+					} // else if (){}
 				}
 			}
 		}
